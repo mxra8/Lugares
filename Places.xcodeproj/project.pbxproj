@@ -12,6 +12,13 @@
 		A03928FB1DA57C5E009D7E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03928F91DA57C5E009D7E8F /* Main.storyboard */; };
 		A03928FD1DA57C5E009D7E8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A03928FC1DA57C5E009D7E8F /* Assets.xcassets */; };
 		A03929001DA57C5E009D7E8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03928FE1DA57C5E009D7E8F /* LaunchScreen.storyboard */; };
+		A039290A1DA5835A009D7E8F /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03929091DA5835A009D7E8F /* PlaceCell.swift */; };
+		A039290E1DA583B0009D7E8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039290B1DA583B0009D7E8F /* DetailViewController.swift */; };
+		A039290F1DA583B0009D7E8F /* PlaceDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039290C1DA583B0009D7E8F /* PlaceDetailViewCell.swift */; };
+		A03929101DA583B0009D7E8F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A039290D1DA583B0009D7E8F /* ReviewViewController.swift */; };
+		A03929121DA583D7009D7E8F /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03929111DA583D7009D7E8F /* Place.swift */; };
+		A0EEA9D71DB0176C0088F72C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0EEA9D61DB0176C0088F72C /* MapKit.framework */; };
+		A0EEA9DB1DB019BF0088F72C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EEA9DA1DB019BF0088F72C /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		A03928FC1DA57C5E009D7E8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A03928FF1DA57C5E009D7E8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A03929011DA57C5E009D7E8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A03929091DA5835A009D7E8F /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		A039290B1DA583B0009D7E8F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A039290C1DA583B0009D7E8F /* PlaceDetailViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewCell.swift; sourceTree = "<group>"; };
+		A039290D1DA583B0009D7E8F /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		A03929111DA583D7009D7E8F /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		A0EEA9D61DB0176C0088F72C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A0EEA9DA1DB019BF0088F72C /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0EEA9D71DB0176C0088F72C /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,7 @@
 			children = (
 				A03928F41DA57C5D009D7E8F /* Places */,
 				A03928F31DA57C5D009D7E8F /* Products */,
+				A0EEA9D51DB0176C0088F72C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +72,26 @@
 			children = (
 				A03928F51DA57C5E009D7E8F /* AppDelegate.swift */,
 				A03928F71DA57C5E009D7E8F /* ViewController.swift */,
+				A0EEA9DA1DB019BF0088F72C /* MapViewController.swift */,
+				A03929111DA583D7009D7E8F /* Place.swift */,
+				A03929091DA5835A009D7E8F /* PlaceCell.swift */,
 				A03928F91DA57C5E009D7E8F /* Main.storyboard */,
 				A03928FC1DA57C5E009D7E8F /* Assets.xcassets */,
 				A03928FE1DA57C5E009D7E8F /* LaunchScreen.storyboard */,
 				A03929011DA57C5E009D7E8F /* Info.plist */,
+				A039290B1DA583B0009D7E8F /* DetailViewController.swift */,
+				A039290C1DA583B0009D7E8F /* PlaceDetailViewCell.swift */,
+				A039290D1DA583B0009D7E8F /* ReviewViewController.swift */,
 			);
 			path = Places;
+			sourceTree = "<group>";
+		};
+		A0EEA9D51DB0176C0088F72C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0EEA9D61DB0176C0088F72C /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +128,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CN3W88D6RM;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -137,8 +172,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A039290A1DA5835A009D7E8F /* PlaceCell.swift in Sources */,
 				A03928F81DA57C5E009D7E8F /* ViewController.swift in Sources */,
+				A03929101DA583B0009D7E8F /* ReviewViewController.swift in Sources */,
+				A039290F1DA583B0009D7E8F /* PlaceDetailViewCell.swift in Sources */,
 				A03928F61DA57C5E009D7E8F /* AppDelegate.swift in Sources */,
+				A03929121DA583D7009D7E8F /* Place.swift in Sources */,
+				A039290E1DA583B0009D7E8F /* DetailViewController.swift in Sources */,
+				A0EEA9DB1DB019BF0088F72C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +343,7 @@
 				A03929061DA57C5E009D7E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
