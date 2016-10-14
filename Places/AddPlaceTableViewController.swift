@@ -8,17 +8,89 @@
 
 import UIKit
 
-class AddPlaceTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddPlaceTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet var imageView: UIImageView!
+    
+    @IBOutlet var textFieldName: UITextField!
+    @IBOutlet var textFieldType: UITextField!
+    @IBOutlet var textFieldDirection: UITextField!
+    @IBOutlet var textFieldTelephone: UITextField!
+    @IBOutlet var textFieldWebsite: UITextField!
+    @IBOutlet var button1: UIButton!
+    @IBOutlet var button2: UIButton!
+    @IBOutlet var button3: UIButton!
+    
+    var rating : String?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.textFieldName.delegate = self
+        self.textFieldType.delegate = self
+        self.textFieldTelephone.delegate = self
+        self.textFieldDirection.delegate = self
+        self.textFieldWebsite.delegate = self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    let defaultColor = UIColor(red: 236.0/255.0, green: 134.0/255.0, blue: 144.0/255.0, alpha: 1.0)
+    let selectedColor = UIColor.red
+    
+    @IBAction func ratingPressed(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 1:
+            self.rating = "dislike"
+            self.button1.backgroundColor = selectedColor
+            self.button2.backgroundColor = defaultColor
+            self.button3.backgroundColor = defaultColor
+        case 2:
+            self.rating = "good"
+            self.button1.backgroundColor = defaultColor
+            self.button2.backgroundColor = selectedColor
+            self.button3.backgroundColor = defaultColor
+        case 3:
+            self.rating = "great"
+            self.button1.backgroundColor = defaultColor
+            self.button2.backgroundColor = defaultColor
+            self.button3.backgroundColor = selectedColor
+        default:
+            break
+        }
+        
+        
+        
+    }
+    
+    @IBAction func savePressed(_ sender: UIBarButtonItem) {
+        
+        if let name = self.textFieldName.text,
+                let type = self.textFieldType.text,
+                let direction = self.textFieldDirection.text,
+                let telephone = self.textFieldTelephone.text,
+                let website = self.textFieldWebsite.text,
+            let theImage = self.imageView.image,
+        let rating = self.rating{
+        
+            let place = Place(name: name, type: type, location: direction, image: theImage, telephone: telephone, website: website)
+            place.rating = rating
+            print(place.name)
+            
+            self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
+            
+        } else {
+            let alertController = UIAlertController(title: "Falta algún dato", message: "Revisa todos los datos", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +114,11 @@ class AddPlaceTableViewController: UITableViewController, UIImagePickerControlle
         
         tableView.deselectRow(at: indexPath, animated: true)
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

@@ -501,14 +501,23 @@
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0nZ-fF-n1J">
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcY-uh-qRx">
+                                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcY-uh-qRx">
                                                             <state key="normal" title="No me gusta"/>
+                                                            <connections>
+                                                                <action selector="ratingPressed:" destination="Pgz-Le-Qz2" eventType="touchUpInside" id="wrT-W9-5GE"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gJ-rV-LEj">
+                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gJ-rV-LEj">
                                                             <state key="normal" title="Me gusta"/>
+                                                            <connections>
+                                                                <action selector="ratingPressed:" destination="Pgz-Le-Qz2" eventType="touchUpInside" id="mcG-rs-V4d"/>
+                                                            </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx1-Qy-yzF">
+                                                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xx1-Qy-yzF">
                                                             <state key="normal" title="Me encanta"/>
+                                                            <connections>
+                                                                <action selector="ratingPressed:" destination="Pgz-Le-Qz2" eventType="touchUpInside" id="t0J-76-Qxv"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -534,13 +543,25 @@
                     <navigationItem key="navigationItem" id="YYq-0r-QuY">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rle-cf-2YS">
                             <connections>
-                                <segue destination="BIB-Ag-Tex" kind="unwind" unwindAction="unwindToMainViewControllerWithSegue:" id="U79-xp-3yi"/>
+                                <segue destination="BIB-Ag-Tex" kind="unwind" identifier="unwindToMainViewController" unwindAction="unwindToMainViewControllerWithSegue:" id="U79-xp-3yi"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qgf-dF-nLR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qgf-dF-nLR">
+                            <connections>
+                                <action selector="savePressed:" destination="Pgz-Le-Qz2" id="gWJ-eW-XWo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="button1" destination="ZcY-uh-qRx" id="bdv-Ol-gmx"/>
+                        <outlet property="button2" destination="6gJ-rV-LEj" id="KVC-gm-9t2"/>
+                        <outlet property="button3" destination="xx1-Qy-yzF" id="TE1-De-c2C"/>
                         <outlet property="imageView" destination="un8-ey-IIF" id="tbt-w2-SCU"/>
+                        <outlet property="textFieldDirection" destination="URh-Cs-ofJ" id="zFQ-ZQ-bAU"/>
+                        <outlet property="textFieldName" destination="Rcc-mV-exc" id="i3b-Vf-fxj"/>
+                        <outlet property="textFieldTelephone" destination="028-el-YDY" id="6dS-0W-jJF"/>
+                        <outlet property="textFieldType" destination="lfD-FJ-cNm" id="Rvr-Ww-dCT"/>
+                        <outlet property="textFieldWebsite" destination="hLP-Vd-8F8" id="4wM-hB-mSH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thw-OX-ye8" userLabel="First Responder" sceneMemberID="firstResponder"/>
