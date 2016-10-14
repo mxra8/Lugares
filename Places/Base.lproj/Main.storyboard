@@ -336,7 +336,7 @@
                                             <frame key="frameInset" width="375" height="260"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un8-ey-IIF"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="un8-ey-IIF"/>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="un8-ey-IIF" firstAttribute="leading" secondItem="vMW-de-czn" secondAttribute="leadingMargin" id="9YG-zj-Xcd"/>
@@ -546,7 +546,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thw-OX-ye8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="BIB-Ag-Tex" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="216"/>
+            <point key="canvasLocation" x="1148" y="215.44227886056973"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="COm-fv-tpI">

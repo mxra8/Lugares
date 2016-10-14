@@ -30,8 +30,6 @@ class MapViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        print("Mapa: "+place.name)
-        
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(place.location) { [unowned self](placemarks, error) in
             if error == nil {
@@ -45,7 +43,7 @@ class MapViewController: UIViewController {
                     self.mapView.selectAnnotation(annotation, animated: true)
                 }
             } else {
-                print("Hay un error: \(error?.localizedDescription)")
+                print("Error: \(error?.localizedDescription)")
             }
         }
     }

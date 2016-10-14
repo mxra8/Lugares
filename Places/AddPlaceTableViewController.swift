@@ -49,6 +49,18 @@ class AddPlaceTableViewController: UITableViewController, UIImagePickerControlle
         self.imageView.contentMode = .scaleAspectFit
         self.imageView.clipsToBounds = true
         
+        let leadingConstrain = NSLayoutConstraint(item: self.imageView, attribute: .leading, relatedBy: .equal, toItem: self.imageView.superview, attribute: .leading, multiplier: 1, constant: 0)
+        leadingConstrain.isActive = true
+        
+        let trailingConstrain = NSLayoutConstraint(item: self.imageView, attribute: .trailing, relatedBy: .equal, toItem: self.imageView.superview, attribute: .trailing, multiplier: 1, constant: 0)
+        trailingConstrain.isActive = true
+        
+        let topConstrain = NSLayoutConstraint(item: self.imageView, attribute: .top, relatedBy: .equal, toItem: self.imageView.superview, attribute: .top, multiplier: 1, constant: 0)
+        topConstrain.isActive = true
+        
+        let bottomConstrain = NSLayoutConstraint(item: self.imageView, attribute: .bottom, relatedBy: .equal, toItem: self.imageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
+        bottomConstrain.isActive = true
+        
         dismiss(animated: true, completion: nil)
     }
 
