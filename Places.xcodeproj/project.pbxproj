@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A02E8C041DB14BAB009B2713 /* AddPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E8C031DB14BAB009B2713 /* AddPlaceTableViewController.swift */; };
 		A03928F61DA57C5E009D7E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03928F51DA57C5E009D7E8F /* AppDelegate.swift */; };
 		A03928F81DA57C5E009D7E8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03928F71DA57C5E009D7E8F /* ViewController.swift */; };
 		A03928FB1DA57C5E009D7E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03928F91DA57C5E009D7E8F /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A02E8C031DB14BAB009B2713 /* AddPlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceTableViewController.swift; sourceTree = "<group>"; };
 		A03928F21DA57C5D009D7E8F /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03928F51DA57C5E009D7E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A03928F71DA57C5E009D7E8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				A03928F51DA57C5E009D7E8F /* AppDelegate.swift */,
 				A03928F71DA57C5E009D7E8F /* ViewController.swift */,
 				A0EEA9DA1DB019BF0088F72C /* MapViewController.swift */,
+				A02E8C031DB14BAB009B2713 /* AddPlaceTableViewController.swift */,
 				A03929111DA583D7009D7E8F /* Place.swift */,
 				A03929091DA5835A009D7E8F /* PlaceCell.swift */,
 				A03928F91DA57C5E009D7E8F /* Main.storyboard */,
@@ -177,6 +180,7 @@
 				A03929101DA583B0009D7E8F /* ReviewViewController.swift in Sources */,
 				A039290F1DA583B0009D7E8F /* PlaceDetailViewCell.swift in Sources */,
 				A03928F61DA57C5E009D7E8F /* AppDelegate.swift in Sources */,
+				A02E8C041DB14BAB009B2713 /* AddPlaceTableViewController.swift in Sources */,
 				A03929121DA583D7009D7E8F /* Place.swift in Sources */,
 				A039290E1DA583B0009D7E8F /* DetailViewController.swift in Sources */,
 				A0EEA9DB1DB019BF0088F72C /* MapViewController.swift in Sources */,
