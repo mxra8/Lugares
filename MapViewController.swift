@@ -83,7 +83,7 @@ extension MapViewController : MKMapViewDelegate {
         }
         
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 52, height: 52))
-        imageView.image = self.place.image
+        imageView.image = UIImage(data: self.place.image! as Data)
             
         annotationView?.leftCalloutAccessoryView = imageView
         annotationView?.pinTintColor = UIColor.green

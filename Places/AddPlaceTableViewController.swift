@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddPlaceTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     @IBOutlet var imageView: UIImageView!
@@ -21,6 +22,7 @@ class AddPlaceTableViewController: UITableViewController, UIImagePickerControlle
     @IBOutlet var button3: UIButton!
     
     var rating : String?
+    var place : Place!
     
 
     override func viewDidLoad() {
@@ -70,6 +72,7 @@ class AddPlaceTableViewController: UITableViewController, UIImagePickerControlle
     
     @IBAction func savePressed(_ sender: UIBarButtonItem) {
         
+        
         if let name = self.textFieldName.text,
                 let type = self.textFieldType.text,
                 let direction = self.textFieldDirection.text,
@@ -78,9 +81,26 @@ class AddPlaceTableViewController: UITableViewController, UIImagePickerControlle
             let theImage = self.imageView.image,
         let rating = self.rating{
         
-            let place = Place(name: name, type: type, location: direction, image: theImage, telephone: telephone, website: website)
-            place.rating = rating
-            print(place.name)
+            if let container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer {
+                let context = container.viewContext
+                
+                self.place = NSEntityDescription.insertNewObject(forEntityName: "Place", into: context) as? Place
+                
+                self.place?.name = name
+                self.place?.type = type
+                self.place?.location = direction
+                self.place?.telephone = telephone
+                self.place?.website = website
+                self.place?.rating = rating
+                
+                self.place?.image = UIImagePNGRepresentation(theImage) as NSData?
+                
+                do {
+                    try context.save()
+                } catch {
+                    print("Error al guardar")
+                }
+            }
             
             self.performSegue(withIdentifier: "unwindToMainViewController", sender: self)
             
@@ -90,6 +110,9 @@ class AddPlaceTableViewController: UITableViewController, UIImagePickerControlle
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
         }
+ 
+        
+        
         
     }
 
