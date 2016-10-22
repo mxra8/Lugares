@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     @IBOutlet var placeImageView: UIImageView!
@@ -139,10 +140,59 @@ extension DetailViewController : UITableViewDelegate {
         switch indexPath.row {
         case 2:
             self.performSegue(withIdentifier: "showMap", sender: nil)
+        case 3:
+            let alertController = UIAlertController(title: "Contactar con: \(self.place.name)", message: "¿Cómo quieres contactar con el número \(self.place.telephone!)", preferredStyle: .actionSheet)
             
+            let callAction = UIAlertAction(title: "Llamar", style: .default, handler: { (action) in
+                if let phoneURL = URL(string: "tel://\(self.place.telephone!)") {
+                    let app = UIApplication.shared
+                    
+                    if app.canOpenURL(phoneURL) {
+                        app.open(phoneURL, options: [:], completionHandler: nil)
+                    }
+                }
+            })
+            alertController.addAction(callAction)
+            
+            let smsAction = UIAlertAction(title: "Mensaje", style: .default, handler: { (action) in
+                if MFMessageComposeViewController.canSendText() {
+                    let msg = "Hola desde la app de Places created by mxra8 en iOS 10"
+                    let msgVC = MFMessageComposeViewController()
+                    msgVC.body = msg
+                    msgVC.recipients = [self.place.telephone!]
+                    msgVC.messageComposeDelegate = self
+                    self.present(msgVC, animated: true, completion: nil)
+                }
+            })
+            alertController.addAction(smsAction)
+            
+            let cancelAction = UIAlertAction(title: "Cancelar", style: .default, handler: nil)
+            alertController.addAction(cancelAction)
+            
+            
+            
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+        case 4:
+            if let websiteURL = URL(string: self.place.website!) {
+                let app = UIApplication.shared
+                if app.canOpenURL(websiteURL){
+                    app.open(websiteURL, options: [:], completionHandler: nil)
+                }
+                
+            }
         default:
             break;
         }
     }
 
+}
+
+extension DetailViewController : MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
+        print(result)
+    }
 }
