@@ -102,7 +102,7 @@
         <!--Detail View Controller-->
         <scene sceneID="EYO-e6-TkV">
             <objects>
-                <viewController id="UDb-BB-HVL" customClass="DetailViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="UDb-BB-HVL" customClass="DetailViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pNC-bp-6pp"/>
                         <viewControllerLayoutGuide type="bottom" id="OcB-qb-pJi"/>
@@ -601,11 +601,11 @@
             </objects>
             <point key="canvasLocation" x="1974" y="215"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favoritos-->
         <scene sceneID="Ok4-bg-IpJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p14-g9-j2r" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Cg5-cN-X0o"/>
+                    <tabBarItem key="tabBarItem" title="Favoritos" image="favorite" id="Cg5-cN-X0o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="a1c-mx-kn8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -626,7 +626,7 @@
                 <pageViewController storyboardIdentifier="WalkthroughtController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="WPW-9t-ZPM" customClass="TutorialViewController" customModule="Places" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Za-zB-eRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-626" y="215"/>
+            <point key="canvasLocation" x="-1367" y="896"/>
         </scene>
         <!--Tutorial Content View Controller-->
         <scene sceneID="rGk-QM-8h4">
@@ -728,16 +728,39 @@
                     </tabBar>
                     <connections>
                         <segue destination="p14-g9-j2r" kind="relationship" relationship="viewControllers" id="aH3-HL-KQy"/>
+                        <segue destination="ALR-K4-zCB" kind="relationship" relationship="viewControllers" id="Jl1-GY-aAV"/>
+                        <segue destination="HrA-e6-99V" kind="relationship" relationship="viewControllers" id="bCE-nw-SaH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pvb-Ou-Ek1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-626.39999999999998" y="-549.17541229385313"/>
         </scene>
+        <!--AboutUs-->
+        <scene sceneID="jPE-pd-WyD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AboutUs" id="HrA-e6-99V" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="IYB-hU-fmJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsU-Jb-eEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265" y="-115"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="tm4-VT-4uV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Discover" id="ALR-K4-zCB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Jor-72-Gu4"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFe-R0-MjQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-626" y="-115"/>
+        </scene>
     </scenes>
     <resources>
         <image name="close-icon" width="128" height="128"/>
         <image name="dislike" width="64" height="64"/>
+        <image name="favorite" width="25" height="25"/>
         <image name="good" width="128" height="128"/>
         <image name="great" width="128" height="128"/>
         <image name="liver-sausage-556489_1920" width="128" height="128"/>

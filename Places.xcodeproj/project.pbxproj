@@ -9,9 +9,15 @@
 /* Begin PBXBuildFile section */
 		A02E8C041DB14BAB009B2713 /* AddPlaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02E8C031DB14BAB009B2713 /* AddPlaceTableViewController.swift */; };
 		A02E8C071DB1AE9D009B2713 /* Places.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A02E8C051DB1AE9D009B2713 /* Places.xcdatamodeld */; };
+		A0302FD81DBECA1800F31323 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0302FD71DBECA1800F31323 /* AboutUsViewController.swift */; };
+		A0302FDA1DBED24000F31323 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0302FD91DBED24000F31323 /* WebViewController.swift */; };
+		A0302FDD1DBFE91F00F31323 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0302FDC1DBFE91F00F31323 /* CloudKit.framework */; };
+		A0302FDF1DC00FE500F31323 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0302FDE1DC00FE500F31323 /* DiscoverTableViewController.swift */; };
 		A0358E601DBAD1050092A847 /* TutorialContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0358E5F1DBAD1050092A847 /* TutorialContentViewController.swift */; };
 		A0358E621DBAD2170092A847 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0358E611DBAD2170092A847 /* TutorialStep.swift */; };
 		A0358E641DBAD7AA0092A847 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0358E631DBAD7AA0092A847 /* TutorialViewController.swift */; };
+		A0358E671DBBF0B30092A847 /* AboutUs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0358E651DBBF0B30092A847 /* AboutUs.storyboard */; };
+		A0358E6A1DBBF3310092A847 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0358E681DBBF3310092A847 /* Discover.storyboard */; };
 		A03928F61DA57C5E009D7E8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03928F51DA57C5E009D7E8F /* AppDelegate.swift */; };
 		A03928F81DA57C5E009D7E8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03928F71DA57C5E009D7E8F /* ViewController.swift */; };
 		A03928FB1DA57C5E009D7E8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03928F91DA57C5E009D7E8F /* Main.storyboard */; };
@@ -29,9 +35,16 @@
 /* Begin PBXFileReference section */
 		A02E8C031DB14BAB009B2713 /* AddPlaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlaceTableViewController.swift; sourceTree = "<group>"; };
 		A02E8C061DB1AE9D009B2713 /* Places.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Places.xcdatamodel; sourceTree = "<group>"; };
+		A0302FD71DBECA1800F31323 /* AboutUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		A0302FD91DBED24000F31323 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		A0302FDB1DBFE2BF00F31323 /* Places.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Places.entitlements; sourceTree = "<group>"; };
+		A0302FDC1DBFE91F00F31323 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		A0302FDE1DC00FE500F31323 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		A0358E5F1DBAD1050092A847 /* TutorialContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialContentViewController.swift; sourceTree = "<group>"; };
 		A0358E611DBAD2170092A847 /* TutorialStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
 		A0358E631DBAD7AA0092A847 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		A0358E661DBBF0B30092A847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AboutUs.storyboard; sourceTree = "<group>"; };
+		A0358E691DBBF3310092A847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		A03928F21DA57C5D009D7E8F /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03928F51DA57C5E009D7E8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A03928F71DA57C5E009D7E8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EEA9D71DB0176C0088F72C /* MapKit.framework in Frameworks */,
+				A0302FDD1DBFE91F00F31323 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +94,7 @@
 		A03928F41DA57C5D009D7E8F /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				A0302FDB1DBFE2BF00F31323 /* Places.entitlements */,
 				A03928F51DA57C5E009D7E8F /* AppDelegate.swift */,
 				A03928F71DA57C5E009D7E8F /* ViewController.swift */,
 				A02E8C051DB1AE9D009B2713 /* Places.xcdatamodeld */,
@@ -88,6 +103,9 @@
 				A03929111DA583D7009D7E8F /* Place.swift */,
 				A03929091DA5835A009D7E8F /* PlaceCell.swift */,
 				A03928F91DA57C5E009D7E8F /* Main.storyboard */,
+				A0358E681DBBF3310092A847 /* Discover.storyboard */,
+				A0302FDE1DC00FE500F31323 /* DiscoverTableViewController.swift */,
+				A0358E651DBBF0B30092A847 /* AboutUs.storyboard */,
 				A0358E631DBAD7AA0092A847 /* TutorialViewController.swift */,
 				A0358E611DBAD2170092A847 /* TutorialStep.swift */,
 				A0358E5F1DBAD1050092A847 /* TutorialContentViewController.swift */,
@@ -97,6 +115,8 @@
 				A039290B1DA583B0009D7E8F /* DetailViewController.swift */,
 				A039290C1DA583B0009D7E8F /* PlaceDetailViewCell.swift */,
 				A039290D1DA583B0009D7E8F /* ReviewViewController.swift */,
+				A0302FD71DBECA1800F31323 /* AboutUsViewController.swift */,
+				A0302FD91DBED24000F31323 /* WebViewController.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -104,6 +124,7 @@
 		A0EEA9D51DB0176C0088F72C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0302FDC1DBFE91F00F31323 /* CloudKit.framework */,
 				A0EEA9D61DB0176C0088F72C /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -141,10 +162,16 @@
 				TargetAttributes = {
 					A03928F11DA57C5D009D7E8F = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = CN3W88D6RM;
+						DevelopmentTeam = 3B99T45XF4;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -174,7 +201,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0358E671DBBF0B30092A847 /* AboutUs.storyboard in Resources */,
 				A03929001DA57C5E009D7E8F /* LaunchScreen.storyboard in Resources */,
+				A0358E6A1DBBF3310092A847 /* Discover.storyboard in Resources */,
 				A03928FD1DA57C5E009D7E8F /* Assets.xcassets in Resources */,
 				A03928FB1DA57C5E009D7E8F /* Main.storyboard in Resources */,
 			);
@@ -191,7 +220,9 @@
 				A0358E621DBAD2170092A847 /* TutorialStep.swift in Sources */,
 				A039290A1DA5835A009D7E8F /* PlaceCell.swift in Sources */,
 				A02E8C071DB1AE9D009B2713 /* Places.xcdatamodeld in Sources */,
+				A0302FD81DBECA1800F31323 /* AboutUsViewController.swift in Sources */,
 				A03928F81DA57C5E009D7E8F /* ViewController.swift in Sources */,
+				A0302FDF1DC00FE500F31323 /* DiscoverTableViewController.swift in Sources */,
 				A03929101DA583B0009D7E8F /* ReviewViewController.swift in Sources */,
 				A0358E641DBAD7AA0092A847 /* TutorialViewController.swift in Sources */,
 				A039290F1DA583B0009D7E8F /* PlaceDetailViewCell.swift in Sources */,
@@ -199,6 +230,7 @@
 				A02E8C041DB14BAB009B2713 /* AddPlaceTableViewController.swift in Sources */,
 				A03929121DA583D7009D7E8F /* Place.swift in Sources */,
 				A039290E1DA583B0009D7E8F /* DetailViewController.swift in Sources */,
+				A0302FDA1DBED24000F31323 /* WebViewController.swift in Sources */,
 				A0EEA9DB1DB019BF0088F72C /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +238,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		A0358E651DBBF0B30092A847 /* AboutUs.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0358E661DBBF0B30092A847 /* Base */,
+			);
+			name = AboutUs.storyboard;
+			sourceTree = "<group>";
+		};
+		A0358E681DBBF3310092A847 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A0358E691DBBF3310092A847 /* Base */,
+			);
+			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
 		A03928F91DA57C5E009D7E8F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -322,10 +370,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CN3W88D6RM;
+				CODE_SIGN_ENTITLEMENTS = Places/Places.entitlements;
+				DEVELOPMENT_TEAM = 3B99T45XF4;
 				INFOPLIST_FILE = Places/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DmxDigital.Places;
+				PRODUCT_BUNDLE_IDENTIFIER = digital.dmx.lugares;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -335,10 +384,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = CN3W88D6RM;
+				CODE_SIGN_ENTITLEMENTS = Places/Places.entitlements;
+				DEVELOPMENT_TEAM = 3B99T45XF4;
 				INFOPLIST_FILE = Places/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.DmxDigital.Places;
+				PRODUCT_BUNDLE_IDENTIFIER = digital.dmx.lugares;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
